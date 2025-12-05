@@ -4,6 +4,7 @@ use std::fs;
 mod day1;
 mod day2;
 mod day3;
+mod day4;
 mod utils;
 
 fn main() {
@@ -22,6 +23,7 @@ fn main() {
         "day1" => day1::solve(data),
         "day2" => day2::solve(data),
         "day3" => day3::solve(data),
+        "day4" => day4::solve(data),
         day => println!("Invalid day {}", day),
     }
 }
