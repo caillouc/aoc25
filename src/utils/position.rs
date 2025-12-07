@@ -41,10 +41,10 @@ impl Sub for Position {
 }
 
 impl Position {
-    pub fn from(x: i32, y: i32) -> Self {
+    pub fn from_i32(x: i32, y: i32) -> Self {
         Self { x, y }
     }
-    pub fn from_usize(x: usize, y: usize) -> Self {
+    pub fn from(x: usize, y: usize) -> Self {
         Self {
             x: x as i32,
             y: y as i32,

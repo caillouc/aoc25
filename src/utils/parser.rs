@@ -1,9 +1,15 @@
 #![allow(dead_code)]
 use std::{fmt::Debug, str::FromStr};
+use super::grid::Grid;
 
 #[allow(dead_code)]
 pub fn parse_double_vec(data: &str) -> Vec<Vec<char>> {
     data.lines().map(|l| l.chars().collect()).collect()
+}
+
+#[allow(dead_code)]
+pub fn parse_grid(data: &str) -> Grid<char> {
+    Grid::from(parse_double_vec(data))
 }
 
 #[allow(dead_code)]

@@ -24,10 +24,10 @@ impl fmt::Display for Direction {
 impl Direction {
     pub fn pos(&self) -> Position {
         match self {
-            Self::Rigth => Position::from(1, 0),
-            Self::Left => Position::from(-1, 0),
-            Self::Up => Position::from(0, -1),
-            Self::Down => Position::from(0, 1),
+            Self::Rigth => Position::from_i32(1, 0),
+            Self::Left => Position::from_i32(-1, 0),
+            Self::Up => Position::from_i32(0, -1),
+            Self::Down => Position::from_i32(0, 1),
         }
     }
     pub fn clockwise(&self) -> Self {

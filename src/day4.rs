@@ -13,7 +13,7 @@ fn solve1(input: &String) -> i32 {
         line.iter().enumerate().for_each(|(x, c)| {
             if *c == '@' {
                 let mut local_count = 0;
-                let current_pos = Position::from_usize(x, y);
+                let current_pos = Position::from(x, y);
                 for adj in current_pos.adjacent_pos(line.len(), grid.len()) {
                     if let Some(pos) = adj && grid[pos.y()][pos.x()] == '@' {
                         local_count += 1;
@@ -37,7 +37,7 @@ fn solve2(input: &String) -> i32 {
             line.iter().enumerate().for_each(|(x, c)| {
                 if *c == '@' {
                     let mut local_count = 0;
-                    let current_pos = Position::from_usize(x, y);
+                    let current_pos = Position::from(x, y);
                     for adj in current_pos.adjacent_pos(line.len(), grid.len()) {
                         if let Some(pos) = adj && grid[pos.y()][pos.x()] == '@' {
                             local_count += 1;
